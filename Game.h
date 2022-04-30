@@ -5,6 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Network.hpp>
 #include <SFML/Audio.hpp>
+using namespace sf;
 /*
 	Class that acts as the game engine. 
 	Wrapper Class.
@@ -13,6 +14,11 @@
 class Game
 {
 private:
+	//Variables
+	//Window
+	RenderWindow* window;
+	VideoMode videoMode;
+	Event ev;
 
 	//Private Functions
 	void initVariables ();
@@ -21,8 +27,11 @@ public:
 	//Constructors / Destructors
 	Game();
 	virtual ~Game();
+	//Accessors
+	const bool running() const;
 
 	//Functions
+	void pollEvents();
 	void update();
 	void render();
 };
