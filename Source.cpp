@@ -1,16 +1,13 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Network.hpp>
-#include <SFML/Audio.hpp>
+#include "Game.h"
+
 
 using namespace std;
 using namespace sf;
 
 int main() {
 	//Window
-	Window window(VideoMode(640, 480), "Game Project", Style::Titlebar | Style::Close | Style::Resize);
+	RenderWindow window(VideoMode(800, 600), "Game Project", Style::Titlebar | Style::Close | Style::Resize);
 	Event ev{};
 
 	//Game loop
@@ -31,6 +28,11 @@ int main() {
 		//Update
 
 		//Render
+		window.clear( Color::Yellow); //Clear Old Frame
+
+		//Draw Your Game
+
+		window.display(); //Tell app that window is done drawing
 	}
 
 	//End of application
