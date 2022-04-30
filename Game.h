@@ -18,20 +18,20 @@ private:
 	//Window
 	RenderWindow* window;
 	VideoMode videoMode;
-	Event ev;
+	bool endGame;
 
-	//Private Functions
-	void initVariables ();
+	void initVariables();
 	void initWindow();
+
 public:
 	//Constructors / Destructors
 	Game();
-	virtual ~Game();
+	~Game();
 	//Accessors
-	const bool running() const;
+	
+	//Modifiers
 
 	//Functions
-	void pollEvents();
 	void update();
 	void render();
 };
