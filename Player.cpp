@@ -33,6 +33,34 @@ const RectangleShape& Player::getShape() const
 	// // O: insert return statement here
 	return this->shape;
 }
+//Accessors
+const int& Player::getHp() const
+{
+	// // O: insert return statement here
+	return this->hp;
+}
+
+const int& Player::getHpMax() const
+{
+	// // O: insert return statement here
+	return this->hpMax;
+}
+//Functions
+void Player::takeDamage(const int damage)
+{
+	if (this->hp > 0)
+		this->hp -= damage;
+	if (this->hp < 0)
+		this->hp = 0;
+}
+
+void Player::gainHealth(const int health)
+{
+	if (this->hp < this->hpMax)
+		this->hp += health;
+	if (this->hp > this->hpMax)
+		this->hp = this->hpMax;
+}
 
 void Player::updateInput()
 {

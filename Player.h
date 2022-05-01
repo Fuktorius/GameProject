@@ -25,8 +25,14 @@ private:
 public:
 	Player(float x = 0.f, float y= 0.f);
 	virtual ~Player();
-
+	//ACCESSORS
 	const RectangleShape& getShape() const;
+	const int& getHp() const;
+	const int& getHpMax() const;
+
+	//FUNCTIONS
+	void takeDamage(const int damage);
+	void gainHealth(const int health);
 
 	void updateInput();
 	void updateWindowBoundsCollision(const RenderTarget* target);
