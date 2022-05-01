@@ -5,7 +5,6 @@ void Player::initVariables()
 	this->movementSpeed = 10.f;
 	this->hpMax = 9;
 	this->hp = hpMax;
-	this->points = 0;
 
 }
 

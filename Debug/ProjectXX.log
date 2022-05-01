@@ -1,2 +1,5 @@
-﻿  Player.cpp
+﻿  Game.cpp
+E:\VSP\ProjectXX\ProjectXX\Game.cpp(79,30): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+  Generating Code...
   ProjectXX.vcxproj -> E:\VSP\ProjectXX\ProjectXX\Debug\ProjectXX.exe
