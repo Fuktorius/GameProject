@@ -23,7 +23,8 @@ public:
 	virtual ~Player();
 
 	void updateInput();
-	void update(RenderTarget* target);
+	void updateWindowBoundsCollision(const RenderTarget* target);
+	void update(const RenderTarget* target);
 	void render(RenderTarget* target);
 };
 
