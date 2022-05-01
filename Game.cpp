@@ -1,6 +1,6 @@
 #include "Game.h"
 
-using namespace sf;
+//using namespace sf;
 //Private functions
 void Game::initVariables()
 {
@@ -26,12 +26,39 @@ Game::~Game() {
 	delete this->window;
 }
 
+const bool Game::running() const
+{
+	return this->window->isOpen();
+}
+
+void Game::pollEvents()
+{
+	while (this->window->pollEvent(this->sfmlEvent)) {
+		switch (this->sfmlEvent.type) {
+		case Event::Closed:
+			this->window->close();
+			break;
+		case Event::KeyPressed:
+			if (this->sfmlEvent.key.code == Keyboard::Escape)
+				this->window->close();
+			break;
+		}
+	}
+}
+
 void Game::update()
 {
+	this->pollEvents();
 }
 
 void Game::render()
 {
+	this->window->clear();
+
+	//Render 
+	this->player.render(this->window);
+
+	this->window->display();
 }
 
 //Functions

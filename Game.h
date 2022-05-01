@@ -1,10 +1,11 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Network.hpp>
-#include <SFML/Audio.hpp>
+#include <iostream>
+#include <ctime>
+
+
+#include "Player.h"
+
 using namespace sf;
 /*
 	Class that acts as the game engine. 
@@ -19,6 +20,9 @@ private:
 	RenderWindow* window;
 	VideoMode videoMode;
 	bool endGame;
+	Event sfmlEvent;
+
+	Player player;
 
 	void initVariables();
 	void initWindow();
@@ -32,6 +36,9 @@ public:
 	//Modifiers
 
 	//Functions
+	const bool running() const;
+	void pollEvents();
+
 	void update();
 	void render();
 };
