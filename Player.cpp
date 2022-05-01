@@ -9,6 +9,8 @@ void Player::initShape()
 {
 	this->shape.setFillColor(Color::Green);
 	this->shape.setSize(Vector2f(50.f, 50.f));
+	//this->shape.setOutlineColor(Color::Yellow);
+	//this->shape.setOutlineThickness(5.f);
 }
 
 Player::Player(float x, float y)

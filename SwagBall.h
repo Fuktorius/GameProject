@@ -13,10 +13,10 @@ class SwagBall
 private:
 	CircleShape shape;
 
-	void initShape();
+	void initShape(const RenderWindow& window);
 
 public:
-	SwagBall();
+	SwagBall(const RenderWindow& window);
 	virtual ~SwagBall();
 
 	//Functions

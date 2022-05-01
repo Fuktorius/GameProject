@@ -1,4 +1,3 @@
-﻿  Player.cpp
-  SwagBall.cpp
-  Generating Code...
+﻿  Game.cpp
+E:\VSP\ProjectXX\ProjectXX\Game.cpp(58,30): warning C4018: '<': signed/unsigned mismatch
   ProjectXX.vcxproj -> E:\VSP\ProjectXX\ProjectXX\Debug\ProjectXX.exe
