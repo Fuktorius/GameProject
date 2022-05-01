@@ -30,6 +30,7 @@ private:
 	int points;
 	Font font;
 	Text guiText;
+	Text endGameText;
 
 	std::vector<SwagBall> swagBalls;
 	float spawnTimerMax;
@@ -46,7 +47,7 @@ public:
 	Game();
 	~Game();
 	//Accessors
-	
+	const bool& getEndGame() const;
 	//Modifiers
 
 	//Functions
@@ -54,6 +55,9 @@ public:
 	void pollEvents();
 
 	void spawnSwagBalls();
+	const int randomizeBallType() const;
+
+	void updatePlayer();
 	void updateCollision();
 	void updateGui();
 	void update();

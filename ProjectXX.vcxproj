@@ -153,7 +153,18 @@
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SwagBall.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Icon.ico" />
+    <Image Include="icon.png" />
+    <Image Include="icon1.ico" />
+    <Image Include="icon_tuI_1.ico" />
+    <Image Include="icon_tuI_2.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
