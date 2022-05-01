@@ -14,12 +14,16 @@ class Player
 private:
 	RectangleShape shape;
 
+	float movementSpeed;
+
 	void initVariables();
 	void initShape();
 public:
-	Player();
+	Player(float x = 0.f, float y= 0.f);
 	virtual ~Player();
-	void update();
+
+	void updateInput();
+	void update(RenderTarget* target);
 	void render(RenderTarget* target);
 };
 

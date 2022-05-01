@@ -49,6 +49,7 @@ void Game::pollEvents()
 void Game::update()
 {
 	this->pollEvents();
+	this->player.update(this->window);
 }
 
 void Game::render()
