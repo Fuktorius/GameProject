@@ -3,6 +3,10 @@
 void Player::initVariables()
 {
 	this->movementSpeed = 10.f;
+	this->hpMax = 9;
+	this->hp = hpMax;
+	this->points = 0;
+
 }
 
 void Player::initShape()
@@ -23,6 +27,12 @@ Player::Player(float x, float y)
 
 Player::~Player() {
 
+}
+
+const RectangleShape& Player::getShape() const
+{
+	// // O: insert return statement here
+	return this->shape;
 }
 
 void Player::updateInput()

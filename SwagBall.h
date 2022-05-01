@@ -19,6 +19,8 @@ public:
 	SwagBall(const RenderWindow& window);
 	virtual ~SwagBall();
 
+	const CircleShape getShape() const;
+
 	//Functions
 	void update();
 	void render(RenderTarget& target);

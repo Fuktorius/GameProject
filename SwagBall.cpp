@@ -20,6 +20,11 @@ SwagBall::~SwagBall() {
 
 }
 
+const CircleShape SwagBall::getShape() const
+{
+	return this->shape;
+}
+
 void SwagBall::update()
 {
 }
